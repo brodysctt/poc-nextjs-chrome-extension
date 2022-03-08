@@ -7,7 +7,8 @@ const Home: NextPage = () => {
   const handleBuy = async () => {
     console.log("hi");
     const res = await fetch(
-      "http://localhost:5001/kata-coinbase-commerce/us-central1/createCharge"
+      "https://us-central1-kata-coinbase-commerce.cloudfunctions.net/createCharge"
+      //"http://localhost:5001/kata-coinbase-commerce/us-central1/createCharge"
     );
     const data: any = await res.json();
     setPayUrl(data.hosted_url);
